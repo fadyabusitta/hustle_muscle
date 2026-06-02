@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+$is_logged_in = isset($_SESSION["user_id"]);
+$current_role = $_SESSION["role"] ?? "user";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,17 +21,31 @@
   <!-- ── HEADER ── -->
   <header class="site-header" id="header">
     <a href="index.php" class="logo-link">
-      <i class="fa-solid fa-x x-icon"></i>Hustle Muscle<sup>©</sup>
+        <i class="fa-solid fa-x x-icon"></i>Hustle Muscle<sup>©</sup>
     </a>
-    <nav class="site-nav">
-      <a href="about.html">About</a>
-      <a href="#plans">Packages</a>
-      <a href="machines.html">Machines</a>
-      <span class="nav-divider">|</span>
-      <a href="signup.php">Sign Up</a>
-      <a href="login.php" class="nav-cta">Log In</a>
+
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="site-nav" id="siteNav">
+        <a href="index.php">Home</a>
+        <a href="#plans">Packages</a>
+        <a href="machines.html">Machines</a>
+        <a href="coaches.php">Coaches</a>
+        <a href="classes.php">Classes</a>
+
+        <?php if ($is_logged_in): ?>
+            <span class="nav-divider">|</span>
+            <a href="dashboard.php">Dashboard</a>
+            <a href="logout.php" class="nav-cta">Logout</a>
+        <?php else: ?>
+            <span class="nav-divider">|</span>
+            <a href="signup.php">Sign Up</a>
+            <a href="login.php" class="nav-cta">Log In</a>
+        <?php endif; ?>
     </nav>
-  </header>
+</header>
 
   <!-- ── HERO ── -->
   <section class="hero">

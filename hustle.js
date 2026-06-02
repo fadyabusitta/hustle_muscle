@@ -94,3 +94,33 @@ style.textContent = `
   }
 `;
 document.head.appendChild(style);
+
+// ── MOBILE NAV TOGGLE ──
+const navToggle = document.getElementById('navToggle');
+const siteNav = document.getElementById('siteNav');
+
+if (navToggle && siteNav) {
+  navToggle.addEventListener('click', () => {
+    siteNav.classList.toggle('open');
+
+    const icon = navToggle.querySelector('i');
+
+    if (icon) {
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-xmark');
+    }
+  });
+
+  siteNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      siteNav.classList.remove('open');
+
+      const icon = navToggle.querySelector('i');
+
+      if (icon) {
+        icon.classList.add('fa-bars');
+        icon.classList.remove('fa-xmark');
+      }
+    });
+  });
+}
