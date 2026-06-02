@@ -1,5 +1,5 @@
 # Local database exports
-*.sql
+
 
 # Temporary test/debug files
 test_db.php
