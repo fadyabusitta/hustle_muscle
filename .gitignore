@@ -1,0 +1,21 @@
+# Local database exports
+*.sql
+
+# Temporary test/debug files
+test_db.php
+php_test.php
+debug.php
+reset_password.php
+reset_omar_password.php
+
+# Windows/system files
+Thumbs.db
+.DS_Store
+
+# Uploaded user files
+uploads/profiles/*
+!uploads/profiles/.gitkeep
+
+# Editor folders
+.vscode/
+.idea/

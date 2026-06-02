@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machines — Hustle Muscle</title>
+  <link rel="stylesheet" href="machines.css">
+  <script src="https://kit.fontawesome.com/f990be7b56.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- ── HEADER ── -->
+  <header class="site-header" id="header">
+    <a href="index.php" class="logo-link">
+      <i class="fa-solid fa-x x-icon"></i>Hustle Muscle<sup>©</sup>
+    </a>
+    <nav class="site-nav">
+      <a href="about.html">About</a>
+      <a href="index.php#plans">Packages</a>
+      <a href="machines.html">Machines</a>
+      <span class="nav-divider">|</span>
+      <a href="signup.php">Sign Up</a>
+      <a href="login.php" class="nav-cta">Log In</a>
+    </nav>
+  </header>
+
+  <!-- ── HERO ── -->
+  <section class="machines-hero">
+    <div class="machines-hero-bg"></div>
+    <div class="machines-hero-content">
+      <p class="machines-hero-tag">Equipment Arsenal</p>
+      <h1 class="machines-hero-title">OUR<br><span>MACHINES</span></h1>
+    </div>
+  </section>
+
+  <!-- ── FILTER ── -->
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="cardio">Cardio</button>
+    <button class="filter-btn" data-filter="strength">Strength</button>
+    <button class="filter-btn" data-filter="crossfit">CrossFit</button>
+  </div>
+
+  <!-- ── MACHINES GRID ── -->
+  <div class="machines-grid" id="machinesGrid">
+
+    <!-- 1. Sprint Bike -->
+    <article class="machine-card reveal" data-category="cardio">
+      <div class="machine-img-wrap">
+        <img src="Concept2-BikeErg-quarter-view-full.jpg" alt="Sprint Bike">
+      </div>
+      <div class="machine-info">
+        <span class="machine-number">01</span>
+        <p class="machine-tag">Cardio · Power</p>
+        <h2 class="machine-name">SPRINT<br><span>BIKE</span></h2>
+        <p class="machine-desc">Eight weeks of maximal power cycling improves muscle mass, power output, and maximal
+          oxygen consumption — kickstarting fast-twitch muscle fiber recruitment.</p>
+        <div class="machine-stats">
+          <div class="mstat"><span class="mstat-val">800+</span><span class="mstat-label">Cal/hr</span></div>
+          <div class="mstat"><span class="mstat-val">Full</span><span class="mstat-label">Body</span></div>
+        </div>
+        <button class="machine-learn" data-machine="bike">
+          LEARN MORE <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </article>
+
+    <!-- 2. CrossFit Rower -->
+    <article class="machine-card reveal reveal-delay-1" data-category="cardio crossfit">
+      <div class="machine-img-wrap">
+        <img src="victor-freitas-KkYWWpurqbE-unsplash.jpg" alt="CrossFit Rower">
+      </div>
+      <div class="machine-info">
+        <span class="machine-number">02</span>
+        <p class="machine-tag">Cardio · CrossFit</p>
+        <h2 class="machine-name">CROSSFIT<br><span>ROWER</span></h2>
+        <p class="machine-desc">A great way to build conditioning and test your mental toughness. Rowing is essential
+          for CrossFit, featuring in so many WODs across every intensity level and distance.</p>
+        <div class="machine-stats">
+          <div class="mstat"><span class="mstat-val">600+</span><span class="mstat-label">Cal/hr</span></div>
+          <div class="mstat"><span class="mstat-val">Low</span><span class="mstat-label">Impact</span></div>
+        </div>
+        <button class="machine-learn" data-machine="rower">
+          LEARN MORE <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </article>
+
+    <!-- 3. SkiErg -->
+    <article class="machine-card reveal reveal-delay-2" data-category="crossfit cardio">
+      <div class="machine-img-wrap">
+        <img src="skierg_cords_in_motion_concept2_1400x.webp" alt="SkiErg">
+      </div>
+      <div class="machine-info">
+        <span class="machine-number">03</span>
+        <p class="machine-tag">Full Body · CrossFit</p>
+        <h2 class="machine-name">SKI<span>ERG</span></h2>
+        <p class="machine-desc">The Concept2 SkiErg builds strength and endurance through the entire body in an
+          efficient, rhythmic motion. A high-calorie burner suitable for all ages and abilities.</p>
+        <div class="machine-stats">
+          <div class="mstat"><span class="mstat-val">700+</span><span class="mstat-label">Cal/hr</span></div>
+          <div class="mstat"><span class="mstat-val">Zero</span><span class="mstat-label">Impact</span></div>
+        </div>
+        <button class="machine-learn" data-machine="skierg">
+          LEARN MORE <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </article>
+
+    <!-- 4. Weightlifting -->
+    <article class="machine-card reveal reveal-delay-3" data-category="strength">
+      <div class="machine-img-wrap">
+        <img src="victor-freitas-qZ-U9z4TQ6A-unsplash.jpg" alt="Weightlifting">
+      </div>
+      <div class="machine-info">
+        <span class="machine-number">04</span>
+        <p class="machine-tag">Strength · Mass</p>
+        <h2 class="machine-name">WEIGHT<br><span>LIFTING</span></h2>
+        <p class="machine-desc">Build muscle, burn body fat, strengthen bones and joints, reduce injury risk, and
+          improve heart health. Start slow, take rest days, always use proper form.</p>
+        <div class="machine-stats">
+          <div class="mstat"><span class="mstat-val">Max</span><span class="mstat-label">Strength</span></div>
+          <div class="mstat"><span class="mstat-val">Core</span><span class="mstat-label">Focus</span></div>
+        </div>
+        <button class="machine-learn" data-machine="weights">
+          LEARN MORE <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </article>
+
+    <!-- 5. Kettlebells -->
+    <article class="machine-card reveal" data-category="crossfit strength">
+      <div class="machine-img-wrap">
+        <img src="fitness-crossfit-kettlebell-wallpaper-preview.jpg" alt="Kettlebells">
+      </div>
+      <div class="machine-info">
+        <span class="machine-number">05</span>
+        <p class="machine-tag">Strength · HIIT</p>
+        <h2 class="machine-name">KETTLE<span>BELLS</span></h2>
+        <p class="machine-desc">Reveals and fixes misalignments, compensations, and weaknesses in the body. Combines
+          strength training with high-intensity cardio — a full-body workout in 20 minutes.</p>
+        <div class="machine-stats">
+          <div class="mstat"><span class="mstat-val">HIIT</span><span class="mstat-label">Format</span></div>
+          <div class="mstat"><span class="mstat-val">All</span><span class="mstat-label">Levels</span></div>
+        </div>
+        <button class="machine-learn" data-machine="kettlebell">
+          LEARN MORE <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </article>
+
+    <!-- 6. Climbing Rope -->
+    <article class="machine-card reveal reveal-delay-1" data-category="crossfit strength">
+      <div class="machine-img-wrap">
+        <img src="east-day3-event7-men-53-spencer-jpg_268-300341.webp" alt="Climbing Rope">
+      </div>
+      <div class="machine-info">
+        <span class="machine-number">06</span>
+        <p class="machine-tag">Upper Body · CrossFit</p>
+        <h2 class="machine-name">CLIMBING<br><span>ROPE</span></h2>
+        <p class="machine-desc">Forces both arms to work in unison while strengthening the upper back and lats. Every
+          pull-up motion activates the same muscles as a bar pull-up — magnified tenfold.</p>
+        <div class="machine-stats">
+          <div class="mstat"><span class="mstat-val">Grip</span><span class="mstat-label">Strength</span></div>
+          <div class="mstat"><span class="mstat-val">Back</span><span class="mstat-label">& Lats</span></div>
+        </div>
+        <button class="machine-learn" data-machine="rope">
+          LEARN MORE <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- ── MODAL ── --> <!-- -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose" aria-label="Close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <h2 class="modal-title" id="modalTitle">MACHINE</h2>
+      <span class="modal-tag" id="modalTag">Category</span>
+      <p class="modal-desc" id="modalDesc">Description here.</p>
+      <ul class="modal-benefits" id="modalBenefits"></ul>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <a href="index.php" class="logo-link">
+      <i class="fa-solid fa-x x-icon"></i>Hustle Muscle<sup>©</sup>
+    </a>
+    <span class="footer-copy">© 2026 Hustle Muscle · Cairo, Egypt</span>
+    <div class="footer-social">
+      <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </footer>
+
+  <script src="machines.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500&display=swap');
+
+:root {
+  --black: #0a0a0a;
+  --dark: #111111;
+  --dark2: #1a1a1a;
+  --dark3: #222222;
+  --gold: #f5c518;
+  --gold-light: #ffd700;
+  --gold-dim: rgba(245, 197, 24, 0.15);
+  --white: #f0f0f0;
+  --grey: #888888;
+  --light-grey: #cccccc;
+  --red-accent: #e63946;
+  --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Barlow Condensed', sans-serif;
+  --font-text: 'Barlow', sans-serif;
+  --nav-height: 72px;
+  --max-w: 1400px;
+}
+
+*,
+*::before,
+*::after {
+  /**/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ── SHARED NAV ── */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  background: rgba(10, 10, 10, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(245, 197, 24, 0.12);
+  transition: background var(--transition);
+}
+
+.site-header.scrolled {
+  background: rgba(10, 10, 10, 0.98);
+  border-color: rgba(245, 197, 24, 0.25);
+}
+
+.logo-link {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  letter-spacing: 3px;
+  color: var(--white);
+  transition: color var(--transition);
+  line-height: 1;
+}
+
+.logo-link:hover {
+  color: var(--gold);
+}
+
+.logo-link .x-icon {
+  color: var(--gold);
+  margin-right: 2px;
+}
+
+.logo-link sup {
+  font-size: 0.25em;
+  color: var(--grey);
+  vertical-align: top;
+  margin-top: 4px;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.site-nav a {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--light-grey);
+  padding: 8px 16px;
+  position: relative;
+  transition: color var(--transition);
+}
+
+.site-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 16px;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width var(--transition);
+}
+
+.site-nav a:hover {
+  color: var(--white);
+}
+
+.site-nav a:hover::after {
+  width: calc(100% - 32px);
+}
+
+.nav-divider {
+  color: rgba(245, 197, 24, 0.4);
+  font-size: 1.2rem;
+  padding: 0 4px;
+}
+
+.nav-cta {
+  background: var(--gold) !important;
+  color: var(--black) !important;
+  border-radius: 2px;
+  font-weight: 600 !important;
+}
+
+.nav-cta::after {
+  display: none !important;
+}
+
+.nav-cta:hover {
+  background: var(--gold-light) !important;
+  transform: translateY(-1px);
+}
+
+/* ── SHARED FOOTER ── */
+.site-footer {
+  background: var(--dark);
+  border-top: 1px solid rgba(245, 197, 24, 0.15);
+  padding: 40px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-social a {
+  font-size: 1.4rem;
+  color: var(--grey);
+  transition: color var(--transition), transform var(--transition);
+}
+
+.footer-social a:hover {
+  color: var(--gold);
+  transform: translateY(-3px);
+}
+
+.footer-copy {
+  font-family: var(--font-text);
+  font-size: 0.75rem;
+  color: var(--grey);
+  letter-spacing: 1px;
+}
+
+/* ── SCROLL REVEAL ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 {
+  transition-delay: 0.1s;
+}
+
+.reveal-delay-2 {
+  transition-delay: 0.2s;
+}
+
+.reveal-delay-3 {
+  transition-delay: 0.3s;
+}
+
+.reveal-delay-4 {
+  transition-delay: 0.4s;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 2px;
+}
+
+/* ── CURSOR ACCENT ── */
+::selection {
+  background: var(--gold);
+  color: var(--black);
+}
